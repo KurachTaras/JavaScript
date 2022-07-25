@@ -110,8 +110,8 @@
 
 // ----- За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками. та вивести в консоль
 
-// let firstName = prompt("Your name?");
-// let middleName = prompt("Your middleName?");
-// let age = prompt("Your age?");
-//
-// alert(`${firstName} ${middleName} ${age}`);
+let firstName = prompt("Your name?");
+let middleName = prompt("Your middleName?");
+let age = +prompt("Your age?");
+
+alert(`${firstName} ${middleName} ${age}`);
