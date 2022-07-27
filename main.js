@@ -50,30 +50,48 @@ let firsObj = {
     title: 'The Fellowship of the Ring',
     pageCount: 432,
     genre: 'fantasy',
-    authors: {
-        name: 'J. R. R. Tolkien',
-        age: 81
-    }
+    authors: [
+        {
+            name: 'J. R. R. Tolkien',
+            age: 81
+        },
+        {
+            name: 'Stephen King',
+            age: 74
+        }
+    ]
 };
 
 let secondObj = {
     title: 'The Two Towers',
     pageCount: 352,
     genre: 'fantasy',
-    authors: {
-        name: 'J. R. R. Tolkien',
-        age: 81
-    }
+    authors: [
+        {
+            name: 'J. R. R. Tolkien',
+            age: 81
+        },
+        {
+            name: 'Stephen King',
+            age: 74
+        }
+    ]
 };
 
 let thirdObj = {
     title: 'The Return of the King',
     pageCount: 432,
     genre: 'fantasy',
-    authors: {
-        name: 'J. R. R. Tolkien',
-        age: 81
-    }
+    authors: [
+        {
+            name: 'J. R. R. Tolkien',
+            age: 81
+        },
+        {
+            name: 'Stephen King',
+            age: 74
+        }
+    ]
 };
 
 
