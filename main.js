@@ -1,117 +1,146 @@
-// ---- Створити змінні. Присвоїти кожному з них значення: 'hello','owu','com', 'ua', 1, 10, -999, 123, 3.14, 2.7, 16, true, false.
+// - Створити масив, наповнити його 10 елементами будь-якого типу, вивести кожен елемент в консоль
+
+
+let arr;
+
+arr = ['first', 1, 'second', 2, 'third', 3, 'fourth', 4, 'fifth', 5];
+console.log(arr);
+console.log(arr[0]);
+console.log(arr[1]);
+console.log(arr[2]);
+console.log(arr[3]);
+console.log(arr[4]);
+console.log(arr[5]);
+console.log(arr[6]);
+console.log(arr[7]);
+console.log(arr[8]);
+console.log(arr[9]);
 
 
 
-// let str = "hello";
-// let company = "owu";
-// let web = "com";
-// let country = "ua";
-// let num = "1";
-// let num2 = "10";
-// let num3 = "-999";
-// let num4 = "123";
-// let num5 = "3.14";
-// let num6 = "2.5";
-// let num7 = "16";
-// let boolean = "true";
-// let boolean2 = "false";
+// - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre.
 
 
 
+let firstBook = {
+    title: 'The Fellowship of the Ring',
+    pageCount: 432,
+    genre: 'fantasy'
+};
 
-// ---Вивести кожну змінну за допомогою: console.log , alert, document.write
+let secondBook = {
+    title: 'The Two Towers',
+    pageCount: 352,
+    genre: 'fantasy'
+};
 
-// console.log(str);
-// console.log(company);
-// console.log(web);
-// console.log(country);
-// console.log(num);
-// console.log(num2);
-// console.log(num3);
-// console.log(num4);
-// console.log(num5);
-// console.log(num6);
-// console.log(num7);
-// console.log(boolean);
-// console.log(boolean2);
-//
-// alert(str);
-// alert(company);
-// alert(web);
-// alert(country);
-// alert(num);
-// alert(num2);
-// alert(num3);
-// alert(num4);
-// alert(num5);
-// alert(num6);
-// alert(num7);
-// alert(boolean);
-// alert(boolean2);
-//
-// document.write(`
-// <div>${str}</div>
-// <hr>
-// <div>${company}</div>
-// <hr>
-// <div>${web}</div>
-// <hr>
-// <div>${country}</div>
-// <hr>
-// <div>${num}</div>
-// <hr>;
-// <div>${num2}</div>
-// <hr>
-// <div>${num3}</div>
-// <hr>
-// <div>${num4}</div>
-// <hr>
-// <div>${num5}</div>
-// <hr>
-// <div>${num6}</div>
-// <hr>
-// <div>${num7}</div>
-// <hr>
-// <div>${boolean}</div>
-// <hr>
-// <div>${boolean2}</div>
-// `);
+let thirdBook = {
+    title: 'The Return of the King',
+    pageCount: 432,
+    genre: 'fantasy'
+};
 
 
 
-
-
-// ---- - Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ. З'єднати їх в одну змінну person (Не об'єкт, просто за допомоги конкатенації)
-
-// let firstname = 'Taras';
-// let middleName = 'Igorovich';
-// let lastName = 'Kurach';
-//
-// let person = (`${firstname} ${middleName} ${lastName}`);
-// console.log(person);
+// - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre, authors. Поле "автори" - масив. Кожен автор має поля name,age
 
 
 
+let firsObj = {
+    title: 'The Fellowship of the Ring',
+    pageCount: 432,
+    genre: 'fantasy',
+    authors: {
+        name: 'J. R. R. Tolkien',
+        age: 81
+    }
+};
+
+let secondObj = {
+    title: 'The Two Towers',
+    pageCount: 352,
+    genre: 'fantasy',
+    authors: {
+        name: 'J. R. R. Tolkien',
+        age: 81
+    }
+};
+
+let thirdObj = {
+    title: 'The Return of the King',
+    pageCount: 432,
+    genre: 'fantasy',
+    authors: {
+        name: 'J. R. R. Tolkien',
+        age: 81
+    }
+};
 
 
-// ---- - За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
-//     let a = 100; let b = '100'; let c = true;
 
-// let a = 100;
-// let b = '100';
-// let c = true;
-//
-// console.log(typeof a);
-// console.log(typeof b);
-// console.log(typeof c);
+// - Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача
 
 
+let users = [
+    {
+        name: 'Taras',
+        username: 'Tar',
+        password: 'orchid'
+    },
+    {
+        name: 'Emilia',
+        username: 'Emi',
+        password: 'sunflower'
+    },
+    {
+        name: 'Stella',
+        username: 'Ste',
+        password: 'camomile'
+    },
+    {
+        name: 'Emma',
+        username: 'Emm',
+        password: 'dandelion'
+    },
+    {
+        name: 'Amelia',
+        username: 'Ame',
+        password: 'buttercup'
+    },
+    {
+        name: 'Sophia',
+        username: 'Soph',
+        password: 'rose'
+    },
+    {
+        name: 'Charlotte',
+        username: 'Char',
+        password: 'tulip'
+    },
+    {
+        name: 'Ava',
+        username: 'Av',
+        password: 'jasmine'
+    },
+    {
+        name: 'Mia',
+        username: 'M',
+        password: 'lily'
+    },
+    {
+        name: 'Olivia',
+        username: 'Oli',
+        password: 'yarrow'
+    }
+]
 
-
-// ----- За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками. та вивести в консоль
-
-let firstName = prompt("Your name?");
-let middleName = prompt("Your middleName?");
-let age = +prompt("Your age?");
-
-alert(`${firstName} ${middleName} ${age}`);
+console.log(users[0]['password']);
+console.log(users[1]['password']);
+console.log(users[2]['password']);
+console.log(users[3]['password']);
+console.log(users[4]['password']);
+console.log(users[5]['password']);
+console.log(users[6]['password']);
+console.log(users[7]['password']);
+console.log(users[8]['password']);
+console.log(users[9]['password']);
