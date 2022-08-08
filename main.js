@@ -236,11 +236,11 @@
 //
 // const qwe = (A, B) => {
 //     if (A < B) {
-//         for (let i = A; i < B; i++) {
+//         for (let i = A; i <= B; i++) {
 //             console.log(i);
 //         }
 //     } else {
-//         for (let i = A; i > B; i--) {
+//         for (let i = A; i >= B; i--) {
 //             console.log(i);
 //         }
 //     }
