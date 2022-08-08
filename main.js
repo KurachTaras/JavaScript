@@ -230,23 +230,23 @@
 
 // - Даны два целых числа A и В . Выведите все числа от A до B включительно, в порядке возрастания, если A < B, или в порядке убывания в противном случае.
 
-// let A = 16;
-// let B = 11;
-//
-//
-// const qwe = (A, B) => {
-//     if (A < B) {
-//         for (let i = A; i <= B; i++) {
-//             console.log(i);
-//         }
-//     } else {
-//         for (let i = A; i >= B; i--) {
-//             console.log(i);
-//         }
-//     }
-// }
-//
-// qwe(A, B);
+let a = 16;
+let b = 11;
+
+
+const qwe = (a, b) => {
+    if (a < b) {
+        for (let i = a; i <= b; i++) {
+            console.log(i);
+        }
+    } else {
+        for (let i = a; i >= b; i--) {
+            console.log(i);
+        }
+    }
+}
+
+qwe(a, b);
 
 
 
