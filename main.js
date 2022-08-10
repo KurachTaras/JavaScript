@@ -1,317 +1,218 @@
-// - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
+// - Знайти та вивести довижину настипних стрінгових значень
+// 'hello world', 'lorem ipsum', 'javascript is cool'
 
-// function square(a, b) {
-//     return a * b;
-// }
+// let hi = 'hello world'
+// let lorem = 'lorem ipsum'
+// let js = 'javascript is cool'
 //
-// console.log(square(10, 20));
+// console.log(hi.length);
+// console.log(lorem.length);
+// console.log(js.length);
 
 
-// - створити функцію яка обчислює та повертає площу кола з радіусом r
+// - Перевести до великого регістру наступні стрінгові значення
+// 'hello world', 'lorem ipsum', 'javascript is cool'
 
-// function square (radius) {
-//     return Math.PI * Math.pow(radius, 2);
-// }
+// let hi = 'hello world'
+// let lorem = 'lorem ipsum'
+// let js = 'javascript is cool'
 //
-// console.log(square(5));
+// console.log(hi.toUpperCase());
+// console.log(lorem.toUpperCase());
+// console.log(js.toUpperCase());
 
 
-// - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
+// - Перевести до нижнього регістру настипні стрінгові значення
+// 'HELLO WORLD', 'LOREM IPSUM', 'JAVASCRIPT IS COOL'
 
-// function square(height, radius) {
-//     return 2 * Math.PI * radius * height;
-// }
+// let hi = 'HELLO WORLD'
+// let lorem = 'LOREM IPSUM'
+// let js = 'JAVASCRIPT IS COOL'
 //
-// console.log(square(2,3));
+// console.log(hi.toLowerCase());
+// console.log(lorem.toLowerCase());
+// console.log(js.toLowerCase());
 
 
-// - створити функцію яка приймає масив та виводить кожен його елемент
-// let array = [1,2,3,4];
+// - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
+
+
+// - Напишіть функцію stringToArray(str), яка перетворює рядок на масив слів.
+//     let str = 'Ревуть воли як ясла повні';
+// let arr = stringToArray(str); ['Ревуть', 'воли', 'як', 'ясла', 'повні']
+
+// let str = 'Ревуть воли як ясла повні';
 //
-// let funInvoke = arr => {
-//     for (const arrElement of arr) {
-//         console.log(arrElement);
+// const stringToArray = (str) => {
+//     let split = str.split(' ')
+//     console.log(split);
+// };
+//
+// stringToArray(str);
+
+
+// - є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map та колбеку перетворити всі об'єкти в масиві на стрінгові.
+
+// let arr = [10,8,-7,55,987,-1011,0,1050,0]
+//
+// let toString = arr.map(value => {
+//     return String(value);
+// })
+//
+// console.log(toString);
+
+
+// - створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction.
+//     let nums = [11,21,3];
+// sortNums(nums,'ascending') // [3,11,21]
+// sortNums(nums,'descending') // [21,11,3]
+
+// let nums = [11,21,3];
+//
+// const sortNums = (array, direction) => {
+//     if (direction === 'ascending') {
+//         array.sort((a, b) => {
+//            return  a - b;
+//         });
+//     } else if (direction === 'descending'){
+//         array.sort((a, b) => {
+//             return b - a;
+//         });
+//     } else {
+//         return 'Try another direction';
 //     }
 // };
 //
-// funInvoke(array);
+// console.log(sortNums(nums, 'ascending'));
 
 
-// - створити функцію яка створює параграф з текстом. Текст задати через аргумент
 
-// function paragraph (text) {
-//     document.write(`<div><p>${text}</p></div>`)
-// }
+// - є масив
+// let coursesAndDurationArray = [
+//     {title: 'JavaScript Complex', monthDuration: 5},
+//     {title: 'Java Complex', monthDuration: 6},
+//     {title: 'Python Complex', monthDuration: 6},
+//     {title: 'QA Complex', monthDuration: 4},
+//     {title: 'FullStack', monthDuration: 7},
+//     {title: 'Frontend', monthDuration: 4}
+// ];
+// -- відсортувати його за спаданням за monthDuration
+
+// let decrease = coursesAndDurationArray.sort((a, b) => {
+//     return b.monthDuration - a.monthDuration;
+// })
 //
-// paragraph('Some text');
+// console.log(decrease);
 
 
-// - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
+// -- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
 
-// function ul(text) {
-//    document.write(`'<li>${text}</li>,
-//                      <li>${text}</li>,
-//                      <li>${text}</li>'`)
-//                 }
+// let fiveAndMore = coursesAndDurationArray.filter(value => value.monthDuration >= 5);
 //
-// ul('add some text');
+// console.log(fiveAndMore);
 
 
-// - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
+// описати колоду карт
 
-// function li(text, num) {
-//     document.write(`<ul>`)
-//     for (let i = 0; i < num; i++) {
-//         document.write(`<li>${text}</li>`)
-//     }
-//     document.write(`</ul>`)
-// }
-//
-// li('add some text', 3);
-
-
-// - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
-// let arr = [1, 'fits', true, 2, 'third', false]
-//
-// function list (array) {
-//     document.write(`<ul>`)
-//     for (let i = 0; i < array.length; i++) {
-//         document.write(`<li>${array[i]}</li>`)
-//     }
-//     document.write(`</ul>`)
-// }
-//
-// list(arr);
-
-
-// - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
-
-// function arrOfObj (array) {
-//     for(let i = 0; i < array.length; i++) {
-//         document.write(`<div>
-//         <p>id: ${array[i].id}, name: ${array[i].name}, age: ${array[i].age}</p>
-//         </div>`);
-//     }
-// }
-//
-// let users = [
-//     {id: 1, name: 'Stella', age:21},
-//     {id: 1, name: 'Emilia', age:22},
-//     {id: 1, name: 'Charlotte', age:23},
-//     {id: 1, name: 'Olivia', age:24}
+// let cards = [
+//     {cardSuit: 'spade', value: 'joker', color: 'black'},
+//     {cardSuit: 'heart', value: 'joker', color: 'red'},
+//     {cardSuit: 'spade', value: 'ace', color: 'black'},
+//     {cardSuit: 'diamond', value: 'ace', color: 'red'},
+//     {cardSuit: 'heart', value: 'ace', color: 'red'},
+//     {cardSuit: 'clubs', value: 'ace', color: 'black'},
+//     {cardSuit: 'spade', value: 'king', color: 'black'},
+//     {cardSuit: 'diamond', value: 'king', color: 'red'},
+//     {cardSuit: 'heart', value: 'king', color: 'red'},
+//     {cardSuit: 'clubs', value: 'king', color: 'black'},
+//     {cardSuit: 'spade', value: 'queen', color: 'black'},
+//     {cardSuit: 'diamond', value: 'queen', color: 'red'},
+//     {cardSuit: 'heart', value: 'queen', color: 'red'},
+//     {cardSuit: 'clubs', value: 'queen', color: 'black'},
+//     {cardSuit: 'spade', value: 'jack', color: 'black'},
+//     {cardSuit: 'diamond', value: 'jack', color: 'red'},
+//     {cardSuit: 'heart', value: 'jack', color: 'red'},
+//     {cardSuit: 'clubs', value: 'jack', color: 'black'},
+//     {cardSuit: 'spade', value: 6, color: 'black'},
+//     {cardSuit: 'diamond', value: 6, color: 'red'},
+//     {cardSuit: 'heart', value: 6, color: 'red'},
+//     {cardSuit: 'clubs', value: 6, color: 'black'},
+//     {cardSuit: 'spade', value: 7, color: 'black'},
+//     {cardSuit: 'diamond', value: 7, color: 'red'},
+//     {cardSuit: 'heart', value: 7, color: 'red'},
+//     {cardSuit: 'clubs', value: 7, color: 'black'},
+//     {cardSuit: 'spade', value: 8, color: 'black'},
+//     {cardSuit: 'diamond', value: 8, color: 'red'},
+//     {cardSuit: 'heart', value: 8, color: 'red'},
+//     {cardSuit: 'clubs', value: 8, color: 'black'},
+//     {cardSuit: 'spade', value: 9, color: 'black'},
+//     {cardSuit: 'diamond', value: 9, color: 'red'},
+//     {cardSuit: 'heart', value: 9, color: 'red'},
+//     {cardSuit: 'clubs', value: 9, color: 'black'},
+//     {cardSuit: 'spade', value: 10, color: 'black'},
+//     {cardSuit: 'diamond', value: 10, color: 'red'},
+//     {cardSuit: 'heart', value: 10, color: 'red'},
+//     {cardSuit: 'clubs', value: 10, color: 'black'},
 // ]
-//
-// arrOfObj(users);
 
 
-// - створити функцію яка повертає найменьше число з масиву
-// let arr = [12, 32, 342, 953, 85, 6, 54, 33, 4234];
-//
-// function minNumber (array) {
-//     let y = array[0]
-//     for (let i = 0; i < array.length; i++) {
-//         if (array[i] < y) {
-//             y = array[i]
-//         }
-//     }
-//     return y
+// - знайти піковий туз
+
+// let diamondAce = cards.find(value => value.cardSuit === 'spade' && value.value === 'ace');
+// console.log(diamondAce);
+
+
+// - всі шістки
+
+// let allSixes = cards.filter(value => value.value === 6);
+// console.log(allSixes);
+
+
+// - всі червоні карти
+
+// let allRedCards = cards.filter(value => value.color === 'red');
+// console.log(allRedCards);
+
+
+// - всі буби
+
+// let allSpadeCards = cards.filter(value => value.cardSuit === 'spade');
+// console.log(allSpadeCards);
+
+
+// - всі трефи від 9 та більше
+
+// let clubs = cards.filter(value => value.value >= 9 && value.cardSuit === 'clubs' || value['value'][1] && value.cardSuit === 'clubs' );
+// console.log(clubs);
+
+
+// {
+//     cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
+//         value: '', // '6'-'10', 'ace','jack','queen','king','joker'
+//     color:'', // 'red','black'
 // }
-//
-// console.log(minNumber(arr));
 
 
-// - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
-// let arr = [1, 2, 3, 5]
-//
-// function adder(array) {
-//     let sum = 0;
-//     for (let i = 0; i < array.length; i++) {
-//         sum += array[i];
-//     }
-//     return sum;
+// Додатково по reduce
+// Взяти описану колоду карт, та за допомоги редюсу попакувати всі карти по "мастях" в об'єкт
+// {
+//     spades:[],
+//     diamonds:[],
+//     hearts:[],
+//     clubs:[]
 // }
-//
-// console.log(adder(arr));
 
-
-
-
-
-// ----------------------------------------------!!!!! ADDITIONAL !!!!!---------------------------------------
-
-
-// Всі функції повинні бути описані стрілочним типом!!!!
-// - створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!)
-
-// const smallestOne = (num1, num2, num3) => {
-//     if (num1 < num2 && num1 < num3) {
-//         console.log(num1);
-//     } else if (num2 < num3 && num2 < num1) {
-//         console.log(num2);
+// let cardSuit = cards.reduce(function (Suit, card) {
+//     if (card.cardSuit === 'spade') {
+//         Suit.spades.push(card);
+//     } else if (card.cardSuit === 'diamond') {
+//         Suit.diamonds.push(card);
+//     } else if (card.cardSuit === 'heart') {
+//         Suit.hearts.push(card);
 //     } else {
-//         console.log(num3);
+//         Suit.clubs.push(card);
 //     }
-// }
+//     return Suit;
+//  }, {spades: [], diamonds: [], hearts: [], clubs: []});
 //
-// smallestOne(4, 2, 1);
-
-
-// - створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)
-
-// const biggerOne = (num1, num2, num3) => {
-//     if (num1 > num2 && num1 > num3) {
-//         console.log(num1);
-//     } else if (num2 > num1 && num2 > num3) {
-//         console.log(num2);
-//     } else {
-//         console.log(num3);
-//     }
-// }
-//
-// biggerOne(12, 15, 21);
-
-
-// - створити функцію яка повертає найбільше число з масиву
-// let arr = [1, 2, 3, 4, 5]
-//
-// const funMax = (array) => {
-//     let max = array[0];
-//      for (const funMaxElement of array) {
-//          if (max < funMaxElement)
-//              max = funMaxElement
-//      }
-//     return max
-//  };
-//
-// console.log(funMax(arr));
-
-
-// - створити функцію яка повертає найменьше число з масиву
-// let arr = [1, 2, 3, 4, 5]
-//
-// const funMin = (array) => {
-//     let min = array[0];
-//      for (const funMinElement of array) {
-//          if (min > funMinElement)
-//              min = funMinElement
-//      }
-//     return min
-//  };
-//
-// console.log(funMin(arr));
-
-
-// - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
-// let arr = [1, 2, 3, 5]
-//
-// const adder = (array) => {
-//     let sum = 0;
-//     for (let i = 0; i < array.length; i++) {
-//         sum += array[i];
-//     }
-//     return sum;
-// }
-//
-// console.log(adder(arr));
-
-
-// - Дано натуральное число n. Выведите все числа от 1 до n.
-
-// let n = 18;
-//
-// const invoke = (num) => {
-//     for(let i = 1; i < num; i++) {
-//         console.log(i);
-//     }
-// }
-//
-// invoke(n);
-
-
-// - Даны два целых числа A и В . Выведите все числа от A до B включительно, в порядке возрастания, если A < B, или в порядке убывания в противном случае.
-
-let a = 16;
-let b = 11;
-
-
-const qwe = (a, b) => {
-    if (a < b) {
-        for (let i = a; i <= b; i++) {
-            console.log(i);
-        }
-    } else {
-        for (let i = a; i >= b; i--) {
-            console.log(i);
-        }
-    }
-}
-
-qwe(a, b);
-
-
-
-// -   функція Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
-//   EXAMPLE:
-//   foo([9,8,0,4], 0) // ==> [ 8, 9, 0, 4 ]
-//   foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
-//   foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
-
-// let arr = [5, 4, 3, 2, 1]
-//
-// const replace = (array, index) => {
-//     let tmp = array[index];
-//     array[index] = array[index + 1]
-//     array[index + 1] = tmp
-//     return arr
-// }
-//
-// console.log(replace(arr, 1));
-
-
-// - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
-// Двожина масиву від 2 до 100
-// EXAMPLE:
-// [1,0,6,0,3] => [1,6,3,0,0]
-// [0,1,2,3,4] => [1,2,3,4,0]
-// [0,0,1,0]   => [1,0,0,0]
-
-// let arr = [0, 1, 2, 0, 0, 4, 3, 5]
-//
-// const move = (array) => {
-//     const res = []
-//     let count = 0
-//     let index = 0
-//
-//     for (let i = 0; i < array.length; i++) {
-//         if (array[i] === 0) {
-//             count ++
-//         } else {
-//             res[index++] = array[i]
-//         }
-//     }
-//     let zeroCount = res.length
-//
-//    for (let i = 0; i < count; i++) {
-//        res[zeroCount++] = 0
-//    }
-//    console.log(res);
-// }
-//
-// move(arr);
-
-
-// - створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.
-
-// const funAverage = (array) => {
-//     let i = 0;
-//     for (const arrayElement of array) {
-//         i += arrayElement;
-//     }
-//     return i/array.length;
-// };
-//
-// console.log(funAverage([5,2,3,4]));
-
-
-
-
+// console.log(cardSuit);
